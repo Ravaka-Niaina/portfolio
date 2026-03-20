@@ -1,0 +1,38 @@
+.about__title {
+  display: flex;
+}
+
+.about__icon {
+  width: 30px;
+  height: auto;
+}
+
+.about__span {
+  font-weight: 500;
+  margin-left: 15px;
+}
+
+#about p {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.about__figure {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.about__profile-picture {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.highlight-word {
+  color: var(--accent);
+  font-weight: 500;
+}

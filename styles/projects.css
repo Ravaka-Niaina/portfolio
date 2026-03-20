@@ -1,0 +1,113 @@
+.projects__title {
+  display: flex;
+  align-items: center;
+}
+
+.projects__icon {
+  width: 30px;
+  height: auto;
+}
+
+.projects__span {
+  font-weight: 500;
+  margin-left: 15px;
+}
+
+.article__container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.article {
+  border: 1px solid var(--muted);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.article__hero-container {
+  margin: 0;
+}
+
+.article__hero {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.article__hero-caption {
+  display: none;
+}
+
+.article__title {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.article__used-technos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.article__techno {
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  padding: 4px;
+  gap: 4px;
+  border-radius: 8px;
+}
+
+.article__techno img {
+  width: 15px;
+  height: auto;
+}
+
+.article__techno--html {
+  background-color: #e34f26;
+}
+
+.article__techno--css {
+  background-color: #1572b6;
+}
+
+.article__techno--js {
+  background-color: #f7df1e;
+}
+
+.article__techno--js span {
+  color: black; /* better contrast */
+}
+
+.article__techno--next {
+  background-color: #111111;
+}
+
+.article__techno--postgres {
+  background-color: #336791;
+}
+
+.nextjs-icon {
+  width: 12px !important;
+}
+
+.article__techno span {
+  font-size: 12px;
+}
+
+.article__description {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.article__view-project {
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 4px;
+  border-radius: 8px;
+}
