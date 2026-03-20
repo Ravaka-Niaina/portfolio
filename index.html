@@ -4,39 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio of Ravaka Niaina Ratefiarivony</title>
-    <style>
-      .profile-picture {
-        width: 150px;
-        height: auto;
-      }
-    </style>
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#about">About me</a></li>
+      <nav class="nav">
+        <img
+          class="nav__open"
+          src="images/bars-solid-full.svg"
+          alt="menu icon"
+        />
+        <img
+          class="nav__close"
+          src="images/x-solid-full.svg"
+          alt="close menu icon"
+        />
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#home">Home</a></li>
+          <li class="nav__item"><a href="#projects">Projects</a></li>
+          <li class="nav__item"><a href="#experience">Experience</a></li>
+          <li class="nav__item"><a href="#about">About me</a></li>
         </ul>
       </nav>
 
       <!-- HERO -->
       <section id="home">
-        <figure>
+        <figure class="home__figure">
           <img
-            src="images/profile-picture-Ravaka.jpg"
+            src="images/profile-picture-Ravaka.webp"
             alt="profile picture of Ravaka Niaina Ratefiarivony"
             class="profile-picture"
           />
           <figcaption>Ravaka Niaina Ratefiarivony</figcaption>
         </figure>
-        <h1>Where style meets substance and the web becomes accessible.</h1>
+        <h1 class="home__title">
+          Where style meets substance and the web becomes accessible.
+        </h1>
 
-        <address>
-          <ul>
-            <li>
+        <address class="home__address-container">
+          <ul class="home__address-list">
+            <li class="home__address home__address--with-span">
               <a href="mailto:ratefyniaina@gmail.com" target="_blank">
                 <img
                   src="images/envelope-regular-full.svg"
@@ -46,7 +53,7 @@
               </a>
             </li>
 
-            <li>
+            <li class="home__address">
               <a href="https://github.com/Ravaka-Niaina" target="_blank">
                 <img
                   src="images/square-github-brands-solid-full.svg"
@@ -55,7 +62,7 @@
               </a>
             </li>
 
-            <li>
+            <li class="home__address">
               <a href="https://www.facebook.com/ratefyniaina/" target="_blank">
                 <img
                   src="images/square-facebook-brands-solid-full.svg"
@@ -64,7 +71,7 @@
               </a>
             </li>
 
-            <li>
+            <li class="home__address home__address--with-span">
               <a href="tel:+261342379788">
                 <img src="images/square-phone-solid-full.svg" alt="" />
                 <span>+261 34 23 797 88</span>
@@ -79,46 +86,56 @@
     <main>
       <!-- PROJECTS -->
       <section id="projects">
-        <header>
-          <h2>
-            <img src="images/folder-regular-full.svg" alt="folder icon" />
-            <span>Projects</span>
+        <header class="projects__header">
+          <h2 class="projects__title">
+            <img
+              class="projects__icon"
+              src="images/folder-regular-full.svg"
+              alt="folder icon"
+            />
+            <span class="projects__span">Projects</span>
           </h2>
         </header>
 
-        <div>
-          <article>
-            <header>
-              <figure>
+        <div class="article__container">
+          <article class="article">
+            <header class="article__header">
+              <figure class="article__hero-container">
                 <img
+                  class="article__hero"
                   src="images/social-links.jpg"
                   alt="screenshot of social-links page"
                 />
-                <figcaption>Social links</figcaption>
+                <figcaption class="article__hero-caption">
+                  Social links
+                </figcaption>
               </figure>
+              <h3 class="article__title">Social links</h3>
 
-              <h3>Social links</h3>
-
-              <ul aria-label="Technologies used">
-                <li>
+              <ul class="article__used-technos" aria-label="Technologies used">
+                <li class="article__techno">
                   <img
                     src="images/html5-brands-solid-full.svg"
                     alt="html icon"
                   />
                   <span>HTML</span>
                 </li>
-                <li>
+
+                <li class="article__techno">
                   <img src="images/css-brands-solid-full.svg" alt="css icon" />
                   <span>CSS</span>
                 </li>
-                <li>
+
+                <li class="article__techno">
                   <img
                     src="images/nextjs-icon-svgrepo-com.svg"
                     alt="next.js icon"
+                    class="nextjs-icon"
                   />
                   <span>Next.js</span>
                 </li>
-                <li>
+
+                <li class="article__techno">
                   <img
                     src="images/square-js-brands-solid-full.svg"
                     alt="javascript icon"
@@ -128,7 +145,7 @@
               </ul>
             </header>
 
-            <p>
+            <p class="article__description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
               sint repellendus fugit voluptatibus doloremque suscipit laudantium
               delectus numquam voluptatum impedit sequi totam fugiat eligendi
@@ -136,7 +153,12 @@
             </p>
 
             <footer>
-              <a href="#">View project</a>
+              <a
+                href="https://ravaka-niaina.github.io/social-links-profile/"
+                target="_blank"
+                class="article__view-project"
+                >View project</a
+              >
             </footer>
           </article>
         </div>
@@ -287,5 +309,33 @@
     <footer>
       <p>&copy; 2026 Ravaka Niaina Ratefiarivony</p>
     </footer>
+
+    <script>
+      const navOpen = document.querySelector(".nav__open");
+      const navClose = document.querySelector(".nav__close");
+      const navList = document.querySelector(".nav__list");
+
+      navOpen.addEventListener("click", () => {
+        navList.classList.add("nav--open");
+        navOpen.classList.add("nav__open--hide");
+        navClose.classList.add("nav__close--show");
+      });
+
+      navClose.addEventListener("click", () => {
+        navList.classList.remove("nav--open");
+        navOpen.classList.remove("nav__open--hide");
+        navClose.classList.remove("nav__close--show");
+      });
+
+      // duplicate articles to view end result temporary
+      const container = document.querySelector(".article__container");
+      const article = document.querySelector(".article");
+
+      const clone = article.cloneNode(true); // true = deep clone with children
+      container.appendChild(clone);
+
+      const anotherClone = article.cloneNode(true);
+      container.appendChild(anotherClone);
+    </script>
   </body>
 </html>
