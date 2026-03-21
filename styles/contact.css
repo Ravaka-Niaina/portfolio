@@ -31,4 +31,21 @@
   padding-right: 12px;
   border-radius: 8px;
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact__address:hover a {
+  background-color: var(--secondary);
+}
+
+@media (min-width: 768px) {
+  #contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact__title {
+    text-align: center;
+  }
 }

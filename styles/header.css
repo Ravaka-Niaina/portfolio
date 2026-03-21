@@ -2,6 +2,7 @@
   border-bottom: 1px solid var(--muted);
   display: flex;
   flex-direction: column;
+  padding-bottom: 8px;
 }
 
 .nav__open {
@@ -30,6 +31,8 @@
   gap: 16px;
   margin: 0;
   padding: 0;
+  padding-bottom: 8px;
+  list-style: none;
 }
 
 .nav--open {
@@ -39,6 +42,11 @@
 .nav__item > a {
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav__item:hover a {
+  color: var(--secondary);
 }
 
 .home__figure {
@@ -115,4 +123,21 @@
 
 .icon--orange {
   color: var(--accent);
+}
+
+@media (min-width: 768px) {
+  .nav__list {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-top: 8px;
+  }
+
+  .nav__open {
+    display: none;
+  }
+
+  .nav__close {
+    display: none;
+  }
 }

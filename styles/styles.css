@@ -45,6 +45,8 @@ body {
   font-family: "roboto", sans-serif;
   margin-left: var(--margin-x);
   margin-right: var(--margin-x);
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 h1,
@@ -74,6 +76,7 @@ p {
 
 .footer {
   margin-top: 80px;
+  margin-bottom: 16px;
 }
 
 .footer__paragraph {
@@ -81,4 +84,10 @@ p {
   font-size: 14px;
   width: fit-content;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 0 16px;
+  }
 }

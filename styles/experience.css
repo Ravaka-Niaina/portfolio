@@ -49,3 +49,21 @@
   font-size: 14px;
   font-weight: 300;
 }
+
+@media (min-width: 768px) {
+  .experience__article {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    grid-template-rows: 1fr;
+    gap: 16px;
+  }
+
+  .experience__header {
+    grid-column: 1/2;
+  }
+
+  .experience__description {
+    grid-column: 2/3;
+    margin-top: 0;
+  }
+}
